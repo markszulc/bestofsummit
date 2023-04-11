@@ -12,12 +12,23 @@
 
  :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: #fff;
-  --overlay-background-color: #eee;
-  --highlight-background-color: #ccc;
-  --text-color: #000;
+  --color-white: #FFF;
+  --color-gray-100: #F8F8F8;
+  --color-gray-200: #E8E8E8;
+  --color-gray-300: #D4D4D4;
+  --color-gray-400: #B6B6B6;
+  --color-gray-500: #909090;
+  --color-gray-600: #686868;
+  --color-gray-700: #444;
+  --color-gray-800: #242424;
+  --color-black: #000;
+  --color-brand-title: #000B1D;
+  --color-accent: rgb(20, 115, 230);
+  --color-accent-hover: rgb(13, 102, 208);
+  --color-info-accent: #5C5CE0;
+  --color-info-accent-hover: #4646C6;
+  --color-info-accent-down: #3D3DB4;
+  --color-info-accent-light: #DEDEF9;
 
   /* fonts */
   --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
@@ -25,9 +36,20 @@
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
+  --body-max-width: 600px;
+  --body-background-color: var(--color-white);
+  --body-alt-background-color: var(--color-gray-600);
+  --body-font-family: 'adobe-clean', 'Trebuchet MS', sans-serif;
+  --body-font-weight: 300;
+  --body-color: var(--color-black);
+  --body-line-height: 1.5;
+  --body-font-size-xxl: 1.75rem; /* 28px */
+  --body-font-size-xl: 1.375rem; /* 22px */
+  --body-font-size-l: 1.25rem; /* 20px */
+  --body-font-size-m: 1.125rem; /* 18px */
+  --body-font-size-s: 1rem; /* 16px */
+  --body-font-size-xs: 0.875rem; /* 14px */
+  --body-font-size-xxs: 0.75rem; /* 12px */
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
@@ -61,15 +83,14 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
+  overflow: hidden;
 }
 
 body.appear {
   display: unset;
 }
 
-header {
-  height: var(--nav-height);
-}
+
 
 h1, h2, h3,
 h4, h5, h6 {
@@ -168,6 +189,13 @@ a.button.secondary, button.secondary {
   color: var(--text-color)
 }
 
+main {
+  scroll-snap-type: both mandatory;	
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
 main input {
   font-size: 1.25rem;
   width: 100%;
@@ -222,6 +250,11 @@ main img {
 
 main .section {
   padding: 64px 16px;
+  scroll-snap-align: start;
+}
+
+main .section:nth-child(2) {
+  background: var(--color-gray-200);
 }
 
 @media (min-width: 600px) {
@@ -241,3 +274,4 @@ main .section {
 main .section.highlight {
   background-color: var(--highlight-background-color);
 }
+
