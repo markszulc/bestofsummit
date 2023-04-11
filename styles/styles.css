@@ -253,6 +253,12 @@ main .section {
   scroll-snap-align: start;
 }
 
+main .section:nth-child(1) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main .section:nth-child(2) {
   background: var(--color-gray-200);
 }
