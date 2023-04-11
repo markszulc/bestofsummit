@@ -29,6 +29,8 @@
   --color-info-accent-hover: #4646C6;
   --color-info-accent-down: #3D3DB4;
   --color-info-accent-light: #DEDEF9;
+  --color-info-adobe-red: #ec1000;
+
 
   /* fonts */
   --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
@@ -251,12 +253,15 @@ main img {
 main .section {
   padding: 64px 16px;
   scroll-snap-align: start;
+  min-height: 100vh;
 }
 
 main .section:nth-child(1) {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--color-info-adobe-red);
+  color: var(--color-white) ;
 }
 
 main .section:nth-child(2) {
