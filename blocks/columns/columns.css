@@ -23,8 +23,15 @@
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 122px;
+    gap: 32px;
   }
+
+  .gap > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 120px;
+  }
+
 
   .columns > div > div {
     flex: 1;
