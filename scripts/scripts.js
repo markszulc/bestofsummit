@@ -71,6 +71,12 @@ async function loadEager(doc) {
     document.body.classList.add('appear');
     await waitForLCP(LCP_BLOCKS);
   }
+
+  var newDiv = document.createElement("div");
+  newDiv.className = "down-arrow";
+  var arrowparent = document.getElementById("adobe-summit-2023-highlights");
+  arrowparent.appendChild(newDiv);  
+    
 }
 
 /**
